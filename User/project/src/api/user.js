@@ -45,5 +45,36 @@ module.exports = (app, channel) => {
     }
   });
 
+
+  app.put("/user/:id/block", async (req, res) => {
+    try {
+        const userId = req.params.id;
+        await service.blockUser(userId);
+
+        return res.status(200).json({ message: 'User blocked successfully' });
+    } catch (err) {
+        console.error(err);
+        if (err instanceof APIError) {
+            return res.status(err.statusCode).json({ error: err.message });
+        }
+        return res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
+
+  app.put("/user/:id/unblock", async (req, res) => {
+    try {
+      const userId = req.params.id;
+      await service.unblockUser(userId);
+
+      return res.status(200).json({ message: 'User unblocked successfully' });
+    } catch (err) {
+      console.error(err);
+      if (err instanceof APIError) {
+        return res.status(err.statusCode).json({ error: err.message });
+      }
+      return res.status(500).json({ error: 'Internal Server Error' });
+    }
+  });
   
-};
+}

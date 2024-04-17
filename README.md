@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # yahya
+=======
+# test
+>>>>>>> 83da7b73f33b5719f4526727d20ca0d219efd1ee
 
 
 
@@ -15,14 +19,22 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
+<<<<<<< HEAD
 git remote add origin https://gitlab.com/yahya7353440/yahya.git
+=======
+git remote add origin https://gitlab.com/yahya7353440/test.git
+>>>>>>> 83da7b73f33b5719f4526727d20ca0d219efd1ee
 git branch -M main
 git push -uf origin main
 ```
 
 ## Integrate with your tools
 
+<<<<<<< HEAD
 - [ ] [Set up project integrations](https://gitlab.com/yahya7353440/yahya/-/settings/integrations)
+=======
+- [ ] [Set up project integrations](https://gitlab.com/yahya7353440/test/-/settings/integrations)
+>>>>>>> 83da7b73f33b5719f4526727d20ca0d219efd1ee
 
 ## Collaborate with your team
 

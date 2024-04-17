@@ -21,7 +21,7 @@ class UserService {
       
             if (validPassword) {
               const token = await GenerateSignature({ email: existingUser.email, _id: existingUser._id },existingUser.role);
-              return FormateData({ message: "success" ,id: existingUser._id,token });
+              return FormateData({ message: "success" ,id: existingUser._id, token });
             }else {
                 return FormateData({ error: "Password incorrect" });
             }
@@ -52,7 +52,7 @@ class UserService {
             phone,
             companyName,
             companyRegistrationNumber,
-            role:'admin'
+            role:'user'
           });
       
           const token = await GenerateSignature({ email: email, _id: existingUser._id },existingUser.role);
@@ -76,7 +76,54 @@ class UserService {
         }
     }
 
+   
+    
+    async blockUser(userId) {
+      try {
+          const user = await this.repository.FindUserById(userId);
+  
+          if (!user) {
+              throw new APIError(404, 'User not found');
+          }
+  
+          user.isBlocked = true;
+  
+          await this.repository.save(user);
+  
+          return { message: 'User blocked successfully' };
+      } catch (error) {
+          console.error(error); 
+          throw new APIError(
+              500,
+              'Internal Server Error',
+              'Error blocking user'
+          );
+      }
+  }
 
-}
+
+
+    async unblockUser(userId) {
+      try {
+        const user = await this.repository.FindUserById(userId);
+  
+        if (!user) {
+          throw new APIError(404, 'User not found');
+        }
+  
+        user.isBlocked = false;
+  
+        await this.repository.save(user);
+  
+        return { message: 'User unblocked successfully' };
+      } catch (error) {
+        throw new APIError(500, 'Error unblocking user');
+      }
+    }
+  }
+
+
+
+
 
 module.exports = UserService;

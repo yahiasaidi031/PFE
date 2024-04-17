@@ -7,27 +7,36 @@ const {
 const Joi = require('joi');
 class UserRepository {
   
-  async CreateUser(userData) {
+  async CreateUser(userData) { 
+    
+      const userSchemaJoi = Joi.object({
 
-    const userSchemaJoi = Joi.object({
-      firstname: Joi.string().required(), 
-      lastname: Joi.string(),
-      email: Joi.string().email().required(),
-      password: Joi.string().required(),
-      isEnterprise: Joi.boolean(),
-      phone: Joi.string().required(),
-      role:Joi.string().required(),
-      companyRegistrationNumber: Joi.string().when('isEnterprise', {
-          is: true,
-          then: Joi.required(),
-          otherwise: Joi.optional()
-      }),
-      companyName: Joi.string().when('isEnterprise', {
-          is: true,
-          then: Joi.required(),
-          otherwise: Joi.optional()
-      })
-  });
+          firstname: Joi.when('isEnterprise', {
+              is: false,
+              then: Joi.string().required(),
+              otherwise: Joi.string().optional()
+          }),
+          lastname: Joi.when('isEnterprise', {
+              is: false,
+              then: Joi.string().required(),
+              otherwise: Joi.string().optional()
+          }),
+          email: Joi.string().email().required(),
+          password: Joi.string().required(),
+          isEnterprise: Joi.boolean(),
+          phone: Joi.string().required(),
+          role: Joi.string().required(),
+          companyName: Joi.when('isEnterprise', {
+              is: true,
+              then: Joi.string().required(),
+              otherwise: Joi.optional()
+          }),
+          companyRegistrationNumber: Joi.when('isEnterprise', {
+              is: true,
+              then: Joi.string().required(),
+              otherwise: Joi.optional()
+          })
+        })
 
     const { error } = userSchemaJoi.validate(userData);
     if (error) {
@@ -63,36 +72,33 @@ class UserRepository {
     }
   }
 
-  async FindUserById({ id }) {
+  async save(user) {
     try {
-      const existingUser = await UserModel.findById(id)
-        .populate("address")
-        .populate("wishlist")
-      return existingUser;
-    } catch (err) {
-      throw new APIError(
-        "API Error",
-        STATUS_CODES.INTERNAL_ERROR,
-        "Unable to Find User"
-      );
+        await user.save();
+    } catch (error) {
+        throw new APIError(500, 'Error saving user', error);
     }
-  }
+}
 
-  async Wishlist(userId) {
+
+  async FindUserById(id) {
     try {
-      const profile = await UserModel.findById(userId).populate(
-        "wishlist"
-      );
-
-      return profile.wishlist;
+        const existingUser = await UserModel.findById(id);
+        if (!existingUser) {
+            throw new APIError(404, 'User not found');
+        }
+        return existingUser;
     } catch (err) {
-      throw new APIError(
-        "API Error",
-        STATUS_CODES.INTERNAL_ERROR,
-        "Unable to Get Wishlist "
-      );
+        console.error(err); 
+        throw new APIError(
+            500,
+            'Internal Server Error',
+            'Unable to Find User'
+        );
     }
-  }
+}
+
+
   async FindAllUsers() {
     try {
         const allUsers = await UserModel.find();

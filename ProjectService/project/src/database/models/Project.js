@@ -9,7 +9,7 @@ const projectSchema = new mongoose.Schema({
     tags: { type: String, },
     image: { type: String, },
     avancements: [{ type: Schema.Types.ObjectId, ref: 'Avancement' }],
-    compagnieCollect: { type: Schema.Types.ObjectId, ref: 'CompagnieCollect' }
+    compagniecollect: [{type: Schema.Types.ObjectId, ref: 'Compagniecollect' }]
 },
     
   {

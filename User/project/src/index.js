@@ -3,6 +3,7 @@ const { PORT } = require('./config');
 const { databaseConnection } = require('./database');
 const expressApp = require('./express-app');
 const { CreateChannel } = require('./utils');
+process.env.TZ = 'UTC';
 
 
 const StartServer = async() => {

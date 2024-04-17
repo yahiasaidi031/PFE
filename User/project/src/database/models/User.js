@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
-    firstname: { type: String, required: true }, 
+    firstname: { type: String }, 
     lastname: { type: String },
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
@@ -9,31 +9,24 @@ const userSchema = new mongoose.Schema({
     phone: { type: String, required: true },
     role: {
         type: String,
-        enum: ['user', 'admin'],
-    
+        enum: ['user', 'admin','responsable'],
+        default: 'user'
     },
     companyName: { type: String },
     companyRegistrationNumber: { type: String },
+    isBlocked: { type: Boolean, default: false } 
 }, {
-    toJSON: {
-        transform(doc, ret) {
-            delete ret.password;
-            delete ret.__v;
-        }
-    },
     timestamps: true 
 });
 
 userSchema.pre('save', function (next) {
-  
     const error = this.validateSync();
     if (error) {
         const err = new Error(error.message);
         err.status = 400; 
         return next(err);
     }
-
     next(); 
 });
 
-module.exports = mongoose.model('user', userSchema);
+module.exports = mongoose.model('User', userSchema);

@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
-const companiecollectSchema = new mongoose.Schema({
+const compagniecollectSchema = new mongoose.Schema({
     montant: { type: Number },
     objectivemontant: { type: String },
+    project: { type: mongoose.Schema.Types.ObjectId, ref: 'Project' }
 },
-    
-  {
+{
     toJSON: {
         transform(doc, ret) {
             delete ret.password;
@@ -15,7 +15,7 @@ const companiecollectSchema = new mongoose.Schema({
     timestamps: true 
 });
 
-companiecollectSchema.pre('save', function (next) {
+compagniecollectSchema.pre('save', function (next) {
   
     const error = this.validateSync();
     if (error) {
@@ -27,4 +27,4 @@ companiecollectSchema.pre('save', function (next) {
     next(); 
 });
 
-module.exports = mongoose.model('Companiecollect', companiecollectSchema);
+module.exports = mongoose.model('Compagniecollect', compagniecollectSchema);

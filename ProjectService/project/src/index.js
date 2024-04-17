@@ -3,9 +3,13 @@ const { PORT } = require('./config');
 const { databaseConnection } = require('./database');
 const expressApp = require('./express-app');
 const { CreateChannel } = require('./utils');
+const projectservice = require('./services/project-service')
 
-const StartServer = async() => {
+const StartServer = async() => { 
 
+
+
+ 
     const app = express();
     
     await databaseConnection();  
@@ -14,6 +18,9 @@ const StartServer = async() => {
     const channel = await CreateChannel()
     
     await expressApp(app,channel);
+
+    const service= new projectservice();
+    await service.consumePayments(channel) ;
 
 
     
