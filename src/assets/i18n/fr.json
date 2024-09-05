@@ -1,0 +1,326 @@
+{
+  "WELCOME": "Salut, ",
+  "NAVBAR": {
+    "DECONNECT": "Se déconnecter",
+    "ACCUEIL": "Accueil",
+    "CONTACT": "Contact",
+    "ABOUT_US": "À propos de nous",
+    "FAQ": "FAQ",
+    "CONNECT": "Se connecter",
+    "SIGNUP": "S'inscrire"
+
+  },
+  "DASHBOARD": {
+    "SEARCH": "Recherche: Tags, Catégorie, Titre"
+  },
+  "FAQ": {
+    "TITLE": "Foire Aux Questions (FAQ)",
+    "GENERAL": "Question générale",
+    "DESCRIPTION": "La culture générale est une information accumulée au fil du temps à travers divers médias et sources. Elle exclut l'apprentissage spécialisé qui ne peut être obtenu qu'avec une formation approfondie et les informations limitées à un seul média.",
+    "INTRODUCTION": "Bienvenue sur la page de la Foire Aux Questions de Charity. Nous avons rassemblé ici les réponses aux questions les plus fréquemment posées concernant notre mission, nos programmes, et la manière dont vous pouvez contribuer. Si vous avez des questions supplémentaires, n'hésitez pas à nous contacter directement. Nous sommes là pour vous aider et vous remercions pour votre intérêt et votre soutien à Charity.",
+    "Q1": "Qu'est-ce que Charity ?",
+    "A1": "Charity est une plateforme en ligne dédiée à la génération de dons pour divers projets caritatifs. Notre objectif est de connecter les donateurs avec des projets impactants qui font une différence dans les communautés du monde entier.",
+
+
+    "Q2": "Comment Charity a-t-elle été fondée ?",
+    "A2": "Charity a été fondée en 2024. Inspirée par Cha9a9a, la plateforme a été créée pour offrir un moyen transparent et efficace aux donateurs de soutenir des projets significatifs.",
+
+    "Q3": "Quels types de projets puis-je trouver sur Charity ?",
+    "A3": "Vous pouvez trouver une large gamme de projets, y compris telles que éducation, santé, environnement, etc. Chaque projet est soigneusement vérifié pour assurer son impact et sa faisabilité.",
+
+    "Q4": "Comment puis-je faire un don à un projet sur Charity ?",
+    "A4": "Vous pouvez faire un don en visitant la page du projet de votre choix et en cliquant sur le bouton 'Faire un don'. Suivez les instructions pour compléter votre don en ligne en toute sécurité.",
+
+    "Q5": "Les dons sont-ils déductibles des impôts ?",
+    "A5": "Oui, tous les dons effectués via Charity sont déductibles des impôts dans la mesure permise par la loi. Un reçu vous sera fourni pour votre don."
+
+
+
+  },
+  "CONTACT": {
+    "FULL_NAME": "Nom et prénom",
+    "PHONE": "Votre téléphone",
+    "OBJECT": "Votre Objet",
+    "MESSAGE": "Message",
+    "YOUR_MESSAGE": "Votre message",
+    "ADDRESS": "Adresse",
+    "TEL": "Tél"
+
+  },
+  "DON_INFORMATION": {
+    "MATERIAL": "Faire un don materiel",
+    "TITLE": "Faire un don",
+    "MATERIAL_TITLE": "Materiel",
+    "PERSONAL_INFORMATION": "Informations personnelles",
+    "NAME": "Nom",
+    "PRENOM": "Prénom",
+    "AMOUNT": "Choisissez le montant de votre participation",
+    "TYPE_DON": "Sélectionnez votre mode de paiement",
+    "PROJECT": "Projet"
+  },
+  "PROJECT_DETAILS": {
+    "GO_CHARITY": "Faire un don",
+    "SHARE": "Partager",
+    "REST": "Reste à collecter :",
+    "MATERIAL": "Faire un don exceptionnel",
+    "COLLECT": "collectés",
+    "Evolution":"Évolution du projet"
+
+  },
+  "FORGET_PASSWORD": {
+    "TITLE": "Mot de passe oublié?",
+    "msj": "Entrez votre email et le code vous sera envoyé !",
+    "SEND": "Envoyer"
+  },
+  "LOGIN": {
+    "TITLE": "Connexion",
+    "CONNECT": "Se connecter",
+    "REMEMBER_ME": "Se souvenir de moi",
+    "FORGET_PASSWORD": "Mot de passe oublié ?",
+    "DONT_HAVE_ACCOUNT": "Vous n'avez pas de compte ?",
+    "SIGNUP": "S'inscrire"
+  },
+  "SIGNUP": {
+    "CREATE": "S'inscrire",
+    "TITLE": {
+      "SIGNUP": "Créez votre compte"
+    }
+  },
+  "MENUITEMS": {
+    "MENU": {
+      "TEXT": "MENU"
+    },
+    "DASHBOARD": {
+      "TEXT": "Tableaux de bord",
+      "LIST": {
+        "ANALYTICS": "Analytique",
+        "CRM": "GRC",
+        "ECOMMERCE": "Commerce électronique",
+        "LEARNING": "Apprentissage",
+        "REALESTATE": "Immobilier"
+      }
+    },
+    "APPS": {
+      "TEXT": "applications",
+      "LIST": {
+        "CALENDAR": "Calendrier",
+        "CHAT": "Discuter",
+        "EMAIL": "E-mail",
+        "ECOMMERCE": "Commerce électronique",
+        "PRODUCTS": "Des produits",
+        "PRODUCTGRID": "Grille de produits",
+        "PRODUCTDETAILS": "détails du produit",
+        "CREATEPRODUCT": "Créer un produit",
+        "ORDERS": "Ordres",
+        "ORDEROVERVIEW": "Aperçu de la commande",
+        "CUSTOMERS": "Clientes",
+        "SHOPPINGCART": "Panier",
+        "CHECKOUT": "Vérifier",
+        "SELLERS": "Les vendeurs",
+        "SELLEROVERVIEW": "Présentation du vendeur",
+        "FILEMANAGER": "Gestionnaire de fichiers",
+        "LEARNING": "Apprentissage",
+        "COURSES": "Cours",
+        "LISTVIEW": "Affichage de liste",
+        "GRIDVIEW": "Vue Grille",
+        "CATEGORY": "Catégorie",
+        "OVERVIEW": "Aperçu",
+        "CREATECOURSE": "Créer un cours",
+        "STUDENTS": "Étudiantes",
+        "MYSUBSCRIPTIONS": "Mes abonnements",
+        "MYCOURSES": "Mes cours",
+        "INSTRUCTORS": "Instructrices",
+        "CREATEINSTRUCTOR": "Créer un instructeur",
+        "INVOICES": "Factures",
+        "CREATEINVOICE": "Créer une facture",
+        "SUPPORTTICKETS": "Billets d'assistance",
+        "REALESTATE": "Immobilier",
+        "LISTINGGRID": "Grille de liste",
+        "LISTINGLIST": "Liste d'inscription",
+        "LISTINGMAP": "Carte d'inscription",
+        "PROPERTYOVERVIEW": "Aperçu de la propriété",
+        "AGENT": "Agente",
+        "AGENCIES": "Agences",
+        "ADDPROPERTY": "Ajouter une propriété",
+        "EARNINGS": "GAINS"
+      }
+    },
+    "PAGES": {
+      "TEXT": "pages"
+    },
+    "AUTHENTICATION": {
+      "TEXT": "Authentification",
+      "LIST": {
+        "SIGNIN": "S'identifier",
+        "SIGNUP": "S'inscrire",
+        "PASSWORDRESET": "Réinitialisation du mot de passe",
+        "PASSWORDCREATE": "Créer un mot de passe",
+        "LOCKSCREEN": "Écran verrouillé",
+        "LOGOUT": "Se déconnecter",
+        "SUCCESSMESSAGE": "Message de réussite",
+        "TWOSTEPVERIFICATION": "Vérification en deux étapes",
+        "ERRORS": "les erreurs",
+        "404ERROR": "Erreur 404",
+        "500": "cinq cents",
+        "503": "cinq cent trois",
+        "OFFLINE": "Hors ligne"
+      }
+    },
+    "EXTRAPAGES": {
+      "TEXT": "pages",
+      "LIST": {
+        "STARTER": "Entrée",
+        "PROFILE": "Profil",
+        "PROFILESETTINGS": "Paramètres de profil",
+        "CONTACTS": "Contacts",
+        "TIMELINE": "Calendrier",
+        "FAQS": "FAQ",
+        "PRICING": "Tarification",
+        "MAINTENANCE": "Entretien",
+        "COMINGSOON": "À venir",
+        "PRIVACYPOLICY": "politique de confidentialité",
+        "TERMS&CONDITIONS": "Conditions générales"
+      }
+    },
+    "COMPONENTS": {
+      "TEXT": "Composantes"
+    },
+    "BOOTSTRAPUI": {
+      "TEXT": "Interface utilisateur d'amorçage",
+      "LIST": {
+        "ALERTS": "Alertes",
+        "BADGES": "Insignes",
+        "BUTTONS": "Boutons",
+        "COLORS": "Couleurs",
+        "CARDS": "Cartes",
+        "CAROUSEL": "Carrouse",
+        "DROPDOWNS": "Listes déroulantes",
+        "GRID": "Grille",
+        "IMAGES": "Images",
+        "TABS": "Onglets",
+        "ACCORDION&COLLAPSE": "Accordéon et effondrement",
+        "MODALS": "Modaux",
+        "OFFCANVAS": "Hors toile",
+        "PLACEHOLDERS": "Espaces réservés",
+        "PROGRESS": "Progrès",
+        "NOTIFICATIONS": "Avis",
+        "MEDIAOBJECT": "Objet multimédia",
+        "EMBEDVIDEO": "Intégrer la vidéo",
+        "TYPOGRAPHY": "Typographie",
+        "LISTS": "Listes",
+        "LINKS": "Liens",
+        "GENERAL": "Générale",
+        "UTILITIES": "Utilitaires"
+      }
+    },
+    "ADVANCEUI": {
+      "TEXT": "Interface utilisateur avancée",
+      "LIST": {
+        "SWEETALERTS": "Alertes sucrées",
+        "NESTABLELIST": "Liste imbriquée",
+        "SCROLLBAR": "Barre de défilement",
+        "SWIPERSLIDER": "Glissière Curseur",
+        "RATTINGS": "Notes",
+        "HIGHLIGHT": "Souligner",
+        "SCROLLSPY": "DéfilementEspion"
+      }
+    },
+    "CUSTOMUI": {
+      "TEXT": "Interface utilisateur personnalisée",
+      "BADGE": "Coutume",
+      "LIST": {
+        "RIBBONS": "Rubans",
+        "PROFILE": "Profil",
+        "COUNTER": "Comptoir"
+      }
+    },
+    "WIDGETS": {
+      "TEXT": "Widget"
+    },
+    "FORMS": {
+      "TEXT": "Formes",
+      "LIST": {
+        "BASICELEMENTS": "Éléments basiques",
+        "FORMSELECT": "Sélection de formulaire",
+        "CHECKBOXS&RADIOS": "Cases à cocher et radios",
+        "PICKERS": "Cueilleurs",
+        "INPUTMASKS": "Masques de saisie",
+        "ADVANCED": "Avancée",
+        "RANGESLIDER": "Curseur de plage",
+        "VALIDATION": "Validation",
+        "WIZARD": "Magicien",
+        "EDITORS": "Éditrices",
+        "FILEUPLOADS": "Téléchargements de fichiers",
+        "FORMLAYOUTS": "Dispositions de formulaire"
+      }
+    },
+    "TABLES": {
+      "TEXT": "les tables",
+      "LIST": {
+        "BASICTABLES": "Tableaux de base",
+        "GRIDJS": "Grille Js",
+        "LISTJS": "Liste J",
+        "DATATABLES": "Tableaux de données"
+      }
+    },
+    "CHARTS": {
+      "TEXT": "Graphiques",
+      "LIST": {
+        "APEXCHARTS": "Apexchart",
+        "LINE": "Doubler",
+        "AREA": "Zone",
+        "COLUMN": "Colonne",
+        "BAR": "Bar",
+        "MIXED": "Mixte",
+        "TIMELINE": "Calendrier",
+        "RANGEAREA": "Zone de portée",
+        "FUNNEL": "Entonnoir",
+        "CANDLSTICK": "Candlstick",
+        "BOXPLOT": "Boîte à moustaches",
+        "BUBBLE": "Bulle",
+        "SCATTER": "Dispersion",
+        "HEATMAP": "Carte de chaleur",
+        "TREEMAP": "Treemap",
+        "PIE": "Tarte",
+        "RADIALBAR": "Barre radiale",
+        "RADAR": "Radar",
+        "POLARAREA": "Zone polaire"
+      }
+    },
+    "ICONS": {
+      "TEXT": "Icônes",
+      "LIST": {
+        "REMIX": "Remixer",
+        "BOXICONS": "Boxicons",
+        "MATERIALDESIGN": "Conception matérielle",
+        "BOOTSTRAP": "Amorcer",
+        "PHOSPHOR": "Phosphore"
+      }
+    },
+    "MAPS": {
+      "TEXT": "Plans",
+      "LIST": {
+        "GOOGLE": "Google",
+        "VECTOR": "AmCharts",
+        "LEAFLET": "Brochure"
+      }
+    },
+    "MULTILEVEL": {
+      "TEXT": "Multi-niveaux",
+      "LIST": {
+        "LEVEL1": {
+          "1": "Niveau 1.1",
+          "2": "Niveau 1.2",
+          "LEVEL2": {
+            "1": "Niveau 2.1",
+            "2": "Niveau 2.2",
+            "LEVEL3": {
+              "1": "Niveau 3.1",
+              "2": "Niveau 3.2"
+            }
+          }
+        }
+      }
+    }
+  }
+}

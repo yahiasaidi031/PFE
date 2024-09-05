@@ -1,0 +1,134 @@
+/* General Spacing */
+.mt-4 {
+  margin-top: 2rem !important;
+}
+
+.mb-5 {
+  margin-bottom: 3rem !important;
+}
+
+.mx-4 {
+  margin-left: 1.5rem !important;
+  margin-right: 1.5rem !important;
+}
+
+/* Section Title */
+.section-title h2 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+  color: #2c3e50;
+  letter-spacing: 0.08rem;
+  border-bottom: 3px solid #ffc107;
+  display: inline-block;
+}
+
+.section-subtitle {
+  font-size: 1.5rem;
+  color: #6c757d;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+/* Card Styling */
+.card {
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+/* Card Header */
+.card-header {
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #ddd;
+  border-radius: 12px 12px 0 0;
+}
+
+/* Card Body */
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Image and Video Styling */
+.img-fluid, video {
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  max-height: 220px;
+  object-fit: cover;
+}
+
+/* Gradient Backgrounds */
+.bg-gradient-primary {
+  background: linear-gradient(90deg, #007bff 0%, #0056b3 100%);
+}
+
+/* Button Styling */
+.btn-gradient-success {
+  background: linear-gradient(90deg, #28a745 0%, #218838 100%);
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.btn-gradient-success:hover {
+  background: linear-gradient(90deg, #218838 0%, #1e7e34 100%);
+}
+
+.btn-link {
+  color: #ffc107;
+  transition: color 0.3s ease;
+}
+
+.btn-link:hover {
+  color: #ffb300;
+  text-decoration: underline;
+}
+
+/* Text and Typography */
+.text-muted {
+  color: #6c757d !important;
+}
+
+.text-success {
+  color: #28a745 !important;
+}
+
+.text-info {
+  color: #17a2b8 !important;
+}
+
+.text-warning {
+  color: #ffc107 !important;
+}
+
+/* Additional Styling */
+.fw-bold {
+  font-weight: 700 !important;
+}
+
+.fw-medium {
+  font-weight: 500 !important;
+}
+
+.fs-md {
+  font-size: 1rem;
+}
+
+.shadow-lg {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+.p-4 {
+  padding: 1.5rem !important;
+}
+
+.pt-5 {
+  padding-top: 2.5rem !important;
+}

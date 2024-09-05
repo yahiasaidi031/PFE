@@ -1,0 +1,56 @@
+<body>
+    <nav class="nav">
+      <div class="nav-logo">
+        <span class="logo-lg">
+          <img src="assets/images/logo-dark.png" alt="" height="40">
+      </span>
+      </div>
+      <div class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="/dashboard" class="link">{{'NAVBAR.ACCUEIL' | translate}}</a></li>
+          <li><a href="/contact" class="link">{{'NAVBAR.CONTACT' | translate}}</a></li>
+          <li><a href="/about-us" class="link">{{'NAVBAR.ABOUT_US' | translate}}</a></li>
+          <li><a href="/faq" class="link">{{'NAVBAR.FAQ' | translate}}</a></li>
+        </ul>
+      </div>
+      <div class="nav-button">
+        <li class="i18n-dropdown dropdown nav-item mr-2" display="dynamic" ngbDropdown>
+          <a style="text-decoration: none; cursor: pointer; color: aliceblue;" class="d-flex align-items-center dropdown-toggle dropdown-language" id="dropdown-flag"
+            data-toggle="dropdown" ngbDropdownToggle>
+            <img class="langimg selected-flag" [src]="selectedLanguageFlag" alt="flag" />
+            <span>{{selectedLanguageText}}</span>
+          </a>
+          <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right text-left" aria-labelledby="dropdown-flag">
+            <a class="dropdown-item" data-language="fr" (click)="ChangeLanguage('fr')">
+              <img class="langimg mr-2" src="./assets/img/flags/fr.png" alt="flag" height="30"/>
+              <span class="font-small-3">Francais</span>
+            </a>
+            <a class="dropdown-item" data-language="en" (click)="ChangeLanguage('en')">
+              <img class="langimg mr-2" src="./assets/img/flags/us.png" alt="flag" height="30" />
+              <span class="font-small-3">English</span>
+            </a>
+          </div>
+        </li>
+        <ng-container >
+          <button class="btn white-btn" id="loginBtn" (click)="login()" *ngIf="!user; else loggedInTemplate">{{'NAVBAR.CONNECT' | translate}}</button>
+          <button class="btn" id="registerBtn" (click)="goToSignUp()">{{'NAVBAR.SIGNUP' | translate}}</button>
+
+          <!-- <button class="btn" id="registerBtn" (click)="charity()">Créer charity</button> -->
+        </ng-container>
+        <ng-template #loggedInTemplate>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              {{user.firstname}}
+            </button>
+            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+              <li><a class="dropdown-item" (click)="logout()">{{'NAVBAR.DECONNECT' | translate}}</a></li>
+            </ul>
+          </div>
+        </ng-template>
+      </div>
+      <div class="nav-menu-btn">
+        <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+      </div>
+    </nav>
+  </body>
+  

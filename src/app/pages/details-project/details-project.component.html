@@ -1,0 +1,67 @@
+<div class="row mt-4 mb-5 mx-4">
+  <!-- Project Title -->
+  <div class="col-12 text-center section-title animated fadeInUp">
+    <h2 class="title">{{details_project.title}}</h2>
+  </div>
+
+  <!-- Project Details -->
+  <div class="col-lg-9">
+    <div class="card shadow-sm border-0">
+      <div class="card-body p-4">
+        <img [src]="imageUrl" alt="Project Image" class="img-fluid rounded mb-4">
+        <p class="text-justify">{{details_project.description}}</p>
+      </div>
+    </div>
+
+    <!-- Advancements -->
+    <div class="container mt-5">
+      <h4 class="text-center mb-4 section-subtitle">{{ 'PROJECT_DETAILS.Evolution' | translate }}</h4>
+      <div class="row">
+        <div class="col-md-6" *ngFor="let avancement of details_project.avancements">
+          <div class="card shadow-sm border-0 mb-4">
+            <div class="card-body">
+              <h5 class="card-title">{{ avancement.title }}</h5>
+              <p class="card-text">{{ avancement.description }}</p>
+              <img [src]="avancement.imgUrl" alt="Advancement Image" class="img-fluid rounded mb-3" height="40">
+              <video [src]="avancement.videoUrl" controls class="img-fluid rounded" width="400" height="400" ></video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>    
+
+  <!-- Progress Chart -->
+  <div class="col-xl-3 col-lg-4">
+    <div class="card shadow-lg border-0">
+      <div class="card-header bg-gradient-primary text-white">
+        <h6 class="card-title mb-0">Pourcentage</h6>
+      </div>
+      <div class="card-body">
+        <apx-chart [series]="basicRadialbarChart.series" [chart]="basicRadialbarChart.chart"
+                   [plotOptions]="basicRadialbarChart.plotOptions" [labels]="basicRadialbarChart.labels"
+                   [colors]="basicRadialbarChart.colors" dir="ltr"></apx-chart>
+      </div>
+      <div class="text-center p-4">
+        <h5 class="mt-3 text-success fw-bold">{{details_project.compagniecollect[details_project.compagniecollect.length - 1]['objectivemontant']}} DT</h5>
+        <div class="fw-medium fs-md mb-1">
+          <span>{{'PROJECT_DETAILS.COLLECT' | translate}}</span>
+          <h5 class="mt-3 d-inline text-info">{{details_project.compagniecollect[details_project.compagniecollect.length - 1]['montant']}} DT</h5>
+        </div>
+        <button type="submit" (click)="doCharity()" class="btn btn-gradient-success btn-block mt-4">
+          <i class="fa fa-credit-card mr-2"></i> {{'PROJECT_DETAILS.GO_CHARITY' | translate}}
+        </button>
+        <p class="text-muted mt-4">{{'PROJECT_DETAILS.REST' | translate}} {{rest_price}} DT</p>
+        <a href="#" (click)="Charity($event)" class="btn btn-link text-warning">{{'PROJECT_DETAILS.MATERIAL' | translate}}</a>
+        <share-buttons theme="circles-dark" [include]="['facebook', 'messenger']"
+                       [showIcon]="true" [showText]="false" 
+                       url="https://rodrigo.kamada.com.br/"
+                       description="Angular Share Buttons"
+                       twitterAccount="rodrigokamada"
+                       class="pt-5">
+        </share-buttons>
+      </div>
+    </div>
+  </div>
+</div>
+

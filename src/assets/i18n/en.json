@@ -1,0 +1,335 @@
+{
+  "WELCOME": "  Welcome, ",
+  "NAVBAR": {
+    "DECONNECT": "Log out",
+    "ACCUEIL": "Home",
+    "CONTACT": "Contact",
+    "ABOUT_US": "About Us",
+    "FAQ": "FAQ",
+    "CONNECT": "Sign In",
+    "SIGNUP": "Sign up"
+
+  },
+  "DASHBOARD": {
+    "SEARCH": "Search: Tags, Category, Title"
+  },
+  "FAQ": {
+    "TITLE": "Frequently Asked Questions (FAQ)",
+    "GENERAL": "General Questions",
+    "DESCRIPTION": "General knowledge is information that has been accumulated over time through various mediums and sources. It excludes specialized learning that can only be obtained with extensive training and information confined to a single medium.",
+    "INTRODUCTION": "Welcome to the Charity Frequently Asked Questions (FAQ) page. We have compiled answers to the most frequently asked questions regarding our mission, our programs, and how you can contribute. If you have any additional questions, please do not hesitate to contact us directly. We are here to help and thank you for your interest and support of Charity.",
+    "Q1": "What is Charity ?",
+    "A1": "Charity is an online platform dedicated to generating donations for various charitable projects. Our aim is to connect donors with impactful projects that make a difference in communities around the world.",
+
+    "Q2": "How was Charity founded?",
+    "A2": "Charity was founded by in 2024. The platform was created to provide a transparent and efficient way for donors to support meaningful projects.",
+
+    "Q3": "What types of projects can I find on Charity ?",
+    "A3": "You can find a wide range of projects including such as education, health, environment, etc. Each project is carefully vetted to ensure its impact and feasibility.",
+
+    "Q4": "How can I donate to a project on Charity ?",
+    "A4": "You can donate by visiting the project page of your choice and clicking on the 'Donate' button. Follow the instructions to complete your donation securely online.",
+
+    "Q5": "Are donations tax-deductible ?",
+    "A5": "Yes, all donations made through Charity are tax-deductible to the extent allowed by law. A receipt will be provided for your donation."
+
+
+
+
+
+  },
+  "CONTACT": {
+    "FULL_NAME": "First & Last Name",
+    "PHONE": "Your phone",
+    "OBJECT": "Your Object",
+    "MESSAGE": "Message",
+    "YOUR_MESSAGE": "Your message",
+    "ADDRESS": "Address",
+    "TEL": "Phone"
+
+
+  },
+  "DON_INFORMATION": {
+    "TITLE": "Make a Donation",
+    "MATERIAL": "Make a material donation",
+    "MATERIAL_TITLE": "Material",
+
+    "PERSONAL_INFORMATION": "Personal Information",
+    "NAME": "Last Name",
+    "PRENOM": "First Name",
+    "AMOUNT": "Choose the amount of your contribution",
+    "TYPE_DON": "Select your payment method",
+    "PROJECT": "Project"
+
+
+  },
+  "PROJECT_DETAILS": {
+    "GO_CHARITY": "Make a Donation",
+    "REST": "Remaining to collect:",
+    "COLLECT": "collected",
+    "MATERIAL": "Make an exceptional donation",
+    "SHARE": "Share",
+    "Evolution": "Evolution of the project"
+
+  },
+  "FORGET_PASSWORD": {
+    "TITLE": "Forgot Password?",
+    "msj": "Enter your email and the code will be sent to you!",
+    "SEND": "Send"
+
+  },
+  "LOGIN": {
+    "TITLE": "Login",
+    "CONNECT": "Sign In",
+    "REMEMBER_ME": "Remember Me",
+    "FORGET_PASSWORD": "Forgot password?",
+    "DONT_HAVE_ACCOUNT": "Don't have an account?",
+    "SIGNUP": "Sign Up"
+
+  },
+  "SIGNUP": {
+    "CREATE": "Sign Up",
+    "TITLE": {
+      "SIGNUP": "Create your account"
+    }
+  },
+  "MENUITEMS": {
+    "MENU": {
+      "TEXT": "MENU"
+    },
+    "DASHBOARD": {
+      "TEXT": "Dashboards",
+      "LIST": {
+        "ANALYTICS": "Analytics",
+        "CRM": "CRM",
+        "ECOMMERCE": "Ecommerce",
+        "LEARNING": "Learning",
+        "REALESTATE": "Real Estate"
+      }
+    },
+    "APPS": {
+      "TEXT": "Apps",
+      "LIST": {
+        "CALENDAR": "Calendar",
+        "CHAT": "Chat",
+        "EMAIL": "Email",
+        "ECOMMERCE": "Ecommerce",
+        "PRODUCTS": "Products",
+        "PRODUCTGRID": "Products Grid",
+        "PRODUCTDETAILS": "Product Details",
+        "CREATEPRODUCT": "Create Product",
+        "ORDERS": "Orders",
+        "ORDEROVERVIEW": "Order Overview",
+        "CUSTOMERS": "Customers",
+        "SHOPPINGCART": "Shopping Cart",
+        "CHECKOUT": "Checkout",
+        "SELLERS": "Sellers",
+        "SELLEROVERVIEW": "Seller Overview",
+        "FILEMANAGER": "File Manager",
+        "LEARNING": "Learning",
+        "COURSES": "Courses",
+        "LISTVIEW": "List View",
+        "GRIDVIEW": "Grid View",
+        "CATEGORY": "Category",
+        "OVERVIEW": "Overview",
+        "CREATECOURSE": "Create Course",
+        "STUDENTS": "Students",
+        "MYSUBSCRIPTIONS": "My Subscriptions",
+        "MYCOURSES": "My Courses",
+        "INSTRUCTORS": "Instructors",
+        "CREATEINSTRUCTOR": "Create Instructor",
+        "INVOICES": "Invoices",
+        "CREATEINVOICE": "Create Invoice",
+        "SUPPORTTICKETS": "Support Tickets",
+        "REALESTATE": "Real Estate",
+        "LISTINGGRID": "Listing Grid",
+        "LISTINGLIST": "Listing List",
+        "LISTINGMAP": "Listing Map",
+        "PROPERTYOVERVIEW": "Property Overview",
+        "AGENT": "Agent",
+        "AGENCIES": "Agencies",
+        "ADDPROPERTY": "Add Property",
+        "EARNINGS": "Earnings"
+      }
+    },
+    "PAGES": {
+      "TEXT": "Pages"
+    },
+    "AUTHENTICATION": {
+      "TEXT": "Authentication",
+      "LIST": {
+        "SIGNIN": "Sign In",
+        "SIGNUP": "Sign Up",
+        "PASSWORDRESET": "Password Reset",
+        "PASSWORDCREATE": "Password Create",
+        "LOCKSCREEN": "Lock Screen",
+        "LOGOUT": "Logout",
+        "SUCCESSMESSAGE": "Success Message",
+        "TWOSTEPVERIFICATION": "Two Step Verification",
+        "ERRORS": "Errors",
+        "404ERROR": "404 Error",
+        "500": "500",
+        "503": "503",
+        "OFFLINE": "Offline Page"
+      }
+    },
+    "MORE": {
+      "TEXT": "More"
+    },
+    "EXTRAPAGES": {
+      "TEXT": "Pages",
+      "LIST": {
+        "STARTER": "Starter",
+        "PROFILE": "Profile",
+        "PROFILESETTINGS": "Profile Settings",
+        "CONTACTS": "Contacts",
+        "TIMELINE": "Timeline",
+        "FAQS": "FAQs",
+        "PRICING": "Pricing",
+        "MAINTENANCE": "Maintenance",
+        "COMINGSOON": "Coming Soon",
+        "PRIVACYPOLICY": "Privacy Policy",
+        "TERMS&CONDITIONS": "Term & Conditions"
+      }
+    },
+    "COMPONENTS": {
+      "TEXT": "Components"
+    },
+    "BOOTSTRAPUI": {
+      "TEXT": "Bootstrap UI",
+      "LIST": {
+        "ALERTS": "Alerts",
+        "BADGES": "Badges",
+        "BUTTONS": "Buttons",
+        "COLORS": "Colors",
+        "CARDS": "Cards",
+        "CAROUSEL": "Carousel",
+        "DROPDOWNS": "Dropdowns",
+        "GRID": "Grid",
+        "IMAGES": "Images",
+        "TABS": "Tabs",
+        "ACCORDION&COLLAPSE": "Accordion & Collapse",
+        "MODALS": "Modals",
+        "OFFCANVAS": "Offcanvas",
+        "PLACEHOLDERS": "Placeholders",
+        "PROGRESS": "Progress",
+        "NOTIFICATIONS": "Notifications",
+        "MEDIAOBJECT": "Media object",
+        "EMBEDVIDEO": "Embed Video",
+        "TYPOGRAPHY": "Typography",
+        "LISTS": "Lists",
+        "LINKS": "Links",
+        "GENERAL": "General",
+        "UTILITIES": "Utilities"
+      }
+    },
+    "ADVANCEUI": {
+      "TEXT": "Advance UI",
+      "LIST": {
+        "SWEETALERTS": "Sweet Alerts",
+        "NESTABLELIST": "Nestable List",
+        "SCROLLBAR": "Scrollbar",
+        "SWIPERSLIDER": "Swiper Slider",
+        "RATTINGS": "Ratings",
+        "HIGHLIGHT": "Highlight",
+        "SCROLLSPY": "ScrollSpy"
+      }
+    },
+    "CUSTOMUI": {
+      "TEXT": "Custom UI",
+      "BADGE": "Custom",
+      "LIST": {
+        "RIBBONS": "Ribbons",
+        "PROFILE": "Profile",
+        "COUNTER": "Counter"
+      }
+    },
+    "WIDGETS": {
+      "TEXT": "Widgets"
+    },
+    "FORMS": {
+      "TEXT": "Forms",
+      "LIST": {
+        "BASICELEMENTS": "Basic Elements",
+        "FORMSELECT": "Form Select",
+        "CHECKBOXS&RADIOS": "Checkboxs & Radios",
+        "PICKERS": "Pickers",
+        "INPUTMASKS": "Input Masks",
+        "ADVANCED": "Advanced",
+        "RANGESLIDER": "Range Slider",
+        "VALIDATION": "Validation",
+        "WIZARD": "Wizard",
+        "EDITORS": "Editors",
+        "FILEUPLOADS": "File Uploads",
+        "FORMLAYOUTS": "Form Layouts"
+      }
+    },
+    "TABLES": {
+      "TEXT": "Tables",
+      "LIST": {
+        "BASICTABLES": "Basic Tables",
+        "GRIDJS": "Grid Js",
+        "LISTJS": "List Js",
+        "DATATABLES": "Datatables"
+      }
+    },
+    "CHARTS": {
+      "TEXT": "Apexcharts",
+      "LIST": {
+        "LINE": "Line",
+        "AREA": "Area",
+        "COLUMN": "Column",
+        "BAR": "Bar",
+        "MIXED": "Mixed",
+        "TIMELINE": "Timeline",
+        "RANGEAREA": "Range Area",
+        "FUNNEL": "Funnel",
+        "CANDLSTICK": "Candlstick",
+        "BOXPLOT": "Boxplot",
+        "BUBBLE": "Bubble",
+        "SCATTER": "Scatter",
+        "HEATMAP": "Heatmap",
+        "TREEMAP": "Treemap",
+        "PIE": "Pie",
+        "RADIALBAR": "Radialbar",
+        "RADAR": "Radar",
+        "POLARAREA": "Polar Area"
+      }
+    },
+    "ICONS": {
+      "TEXT": "Icons",
+      "LIST": {
+        "REMIX": "Remix",
+        "BOXICONS": "Boxicons",
+        "MATERIALDESIGN": "Material Design",
+        "BOOTSTRAP": "Bootstrap",
+        "PHOSPHOR": "Phosphor"
+      }
+    },
+    "MAPS": {
+      "TEXT": "Maps",
+      "LIST": {
+        "GOOGLE": "Google",
+        "VECTOR": "AmCharts",
+        "LEAFLET": "Leaflet"
+      }
+    },
+    "MULTILEVEL": {
+      "TEXT": "Multi Level",
+      "LIST": {
+        "LEVEL1": {
+          "1": "Level 1.1",
+          "2": "Level 1.2",
+          "LEVEL2": {
+            "1": "Level 2.1",
+            "2": "Level 2.2",
+            "LEVEL3": {
+              "1": "Level 3.1",
+              "2": "Level 3.2"
+            }
+          }
+        }
+      }
+    }
+  }
+}

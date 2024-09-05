@@ -1,0 +1,110 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>Sign Up</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="form-box">
+      <div class="register-container" id="register">
+        <header>{{'SIGNUP.TITLE.SIGNUP' | translate}}</header>
+        <form [formGroup]="formSignUp" (ngSubmit)="onSubmit()">
+          <div formGroupName="personalInfo">
+            <div class="input-box" *ngIf="!formSignUp.get('personalInfo.isEnterprise')?.value">
+              <input type="text" class="input-field" formControlName="firstname" placeholder="First Name">
+              <div *ngIf="formSignUp.get('personalInfo.firstname')?.invalid && (formSignUp.get('personalInfo.firstname')?.dirty || formSignUp.get('personalInfo.firstname')?.touched)">
+                <small class="error" *ngIf="formSignUp.get('personalInfo.firstname')?.errors?.['required']">First Name is required</small>
+              </div>
+            </div>
+            <br>
+            <div class="input-box" *ngIf="!formSignUp.get('personalInfo.isEnterprise')?.value">
+              <input type="text" class="input-field" formControlName="lastname" placeholder="Last Name">
+              <div *ngIf="formSignUp.get('personalInfo.lastname')?.invalid && (formSignUp.get('personalInfo.lastname')?.dirty || formSignUp.get('personalInfo.lastname')?.touched)">
+                <small class="error" *ngIf="formSignUp.get('personalInfo.lastname')?.errors?.['required']">Last Name is required</small>
+              </div>
+            </div>
+            <br>
+            <div class="input-box" *ngIf="!formSignUp.get('personalInfo.isEnterprise')?.value">
+              <input type="email" class="input-field" formControlName="email" placeholder="Email">
+              <div *ngIf="formSignUp.get('personalInfo.email')?.invalid && (formSignUp.get('personalInfo.email')?.dirty || formSignUp.get('personalInfo.email')?.touched)">
+                <small class="error" *ngIf="formSignUp.get('personalInfo.email')?.errors?.['required']">Email is required</small>
+                <small class="error" *ngIf="formSignUp.get('personalInfo.email')?.errors?.['email']">Email is invalid</small>
+              </div>
+            </div>
+            <br>
+            <div class="input-box" *ngIf="!formSignUp.get('personalInfo.isEnterprise')?.value">
+              <input type="password" class="input-field" formControlName="password" placeholder="Password">
+              <div *ngIf="formSignUp.get('personalInfo.password')?.invalid && (formSignUp.get('personalInfo.password')?.dirty || formSignUp.get('personalInfo.password')?.touched)">
+                <small class="error" *ngIf="formSignUp.get('personalInfo.password')?.errors?.['required']">Password is required</small>
+                <small class="error" *ngIf="formSignUp.get('personalInfo.password')?.errors?.['minlength']">Password must be at least 8 characters</small>
+              </div>
+            </div>
+            <br>
+            <div class="input-box" *ngIf="!formSignUp.get('personalInfo.isEnterprise')?.value">
+              <input type="text" class="input-field" formControlName="phone" placeholder="Phone">
+              <div *ngIf="formSignUp.get('personalInfo.phone')?.invalid && (formSignUp.get('personalInfo.phone')?.dirty || formSignUp.get('personalInfo.phone')?.touched)">
+                <small class="error" *ngIf="formSignUp.get('personalInfo.phone')?.errors?.['required']">Phone is required</small>
+              </div>
+            </div>
+            <br>
+            <div>
+              <label>
+                <input type="checkbox" formControlName="isEnterprise"> Is Enterprise
+              </label>
+            </div>
+          </div>
+
+          <!-- Enterprise Form -->
+          <div formGroupName="enterpriseInfo" *ngIf="formSignUp.get('personalInfo.isEnterprise')?.value">
+            <div class="input-box">
+              <input type="text" class="input-field" formControlName="companyName" placeholder="Company Name">
+              <div *ngIf="formSignUp.get('enterpriseInfo.companyName')?.invalid && (formSignUp.get('enterpriseInfo.companyName')?.dirty || formSignUp.get('enterpriseInfo.companyName')?.touched)">
+                <small class="error" *ngIf="formSignUp.get('enterpriseInfo.companyName')?.errors?.['required']">Company Name is required</small>
+              </div>
+            </div>
+            <br>
+            <div class="input-box">
+              <input type="text" class="input-field" formControlName="companyRegistrationNumber" placeholder="Company Registration Number">
+              <div *ngIf="formSignUp.get('enterpriseInfo.companyRegistrationNumber')?.invalid && (formSignUp.get('enterpriseInfo.companyRegistrationNumber')?.dirty || formSignUp.get('enterpriseInfo.companyRegistrationNumber')?.touched)">
+                <small class="error" *ngIf="formSignUp.get('enterpriseInfo.companyRegistrationNumber')?.errors?.['required']">Company Registration Number is required</small>
+              </div>
+            </div>
+            <br>
+
+            <div class="input-box" >
+              <input type="email" class="input-field" formControlName="email" placeholder="Email">
+              <div *ngIf="formSignUp.get('enterpriseInfo.email')?.invalid && (formSignUp.get('enterpriseInfo.email')?.dirty || formSignUp.get('enterpriseInfo.email')?.touched)">
+                <small class="error" *ngIf="formSignUp.get('enterpriseInfo.email')?.errors?.['required']">Email is required</small>
+                <small class="error" *ngIf="formSignUp.get('enterpriseInfo.email')?.errors?.['email']">Email is invalid</small>
+              </div>
+            </div>
+            <br>
+            <div class="input-box" >
+              <input type="password" class="input-field" formControlName="password" placeholder="Password">
+              <div *ngIf="formSignUp.get('enterpriseInfo.password')?.invalid && (formSignUp.get('enterpriseInfo.password')?.dirty || formSignUp.get('enterpriseInfo.password')?.touched)">
+                <small class="error" *ngIf="formSignUp.get('enterpriseInfo.password')?.errors?.['required']">Password is required</small>
+                <small class="error" *ngIf="formSignUp.get('enterpriseInfo.password')?.errors?.['minlength']">Password must be at least 8 characters</small>
+              </div>
+              </div>
+              <br>
+              <div class="input-box" >
+                <input type="text" class="input-field" formControlName="phone" placeholder="Phone">
+                <div *ngIf="formSignUp.get('enterpriseInfo.phone')?.invalid && (formSignUp.get('enterpriseInfo.phone')?.dirty || formSignUp.get('enterpriseInfo.phone')?.touched)">
+                  <small class="error" *ngIf="formSignUp.get('enterpriseInfo.phone')?.errors?.['required']">Phone is required</small>
+                </div>
+              </div>
+              <br>
+            </div>
+
+          <div class="input-box">
+            <input type="submit" class="submit" value="{{'SIGNUP.CREATE' | translate}}">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
