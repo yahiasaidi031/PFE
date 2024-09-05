@@ -77,4 +77,96 @@ module.exports = (app, channel) => {
     }
   });
   
+ 
+  app.post('/user/send-reset-otp', async (req, res) => {
+    try {
+      const { email } = req.body;
+      if (!email) throw new Error("An email is required");
+      const createdPasswordResetOTP = await service.sendPasswordResetOTPEmail(email);
+      res.status(200).json(createdPasswordResetOTP);
+    } catch (error) {
+      res.status(400).send(error.message);
+    }
+  });
+
+  app.post('/user/reset-password', async (req, res) => {
+
+      try {
+        const result = await service.ResetPassword(req.body);
+        // Send the success response
+        res.status(200).send(result);
+    } catch (err) {
+        console.error('Request Error:', err);
+
+        // Check if a response has already been sent
+        if (res.headersSent) {
+            return; // Exit early if headers are already sent
+        }
+
+        // Handle API errors consistently
+        if (err instanceof APIError) {
+            res.status(err.statusCode).send({ message: err.message });
+        } else {
+            res.status(500).send({ message: 'Internal Server Error' });
+        }
+    
+  }
+  });
+
+
+
+  app.put("/user/:id/role", async (req, res) => {
+    const { id } = req.params;
+    const { role } = req.body;
+
+    if (!['user', 'admin', 'responsable'].includes(role)) {
+      return res.status(400).json({ error: 'Invalid role' });
+    }
+
+    try {
+      const { data } = await service.UpdateUserRole(id, role);
+      return res.status(200).json(data);
+    } catch (err) {
+      console.error(err);
+      if (err instanceof APIError) {
+        return res.status(err.statusCode).json({ error: err.message });
+      }
+      return res.status(500).json({ error: 'Internal Server Error' });
+    }
+  });
+
+  app.post("/contact", async (req, res) => {
+    try {
+
+        const { name, email, phone, object, message } = req.body;
+        const { data } = await service.MakeContact({ name, email, phone, object, message });
+        return res.status(201).json(data);
+    } catch (err) {
+        console.error(err);
+        if (err instanceof APIError) {
+            return res.status(err.statusCode).json({ error: err.message });
+        }
+        return res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
+  
+  app.get("/contacts", async (req, res) => {
+    try {
+      const { data } = await service.GetAllContacts();
+      return res.status(200).json(data);
+    } catch (err) {
+      console.error(err);
+      if (err instanceof APIError) {
+        return res.status(err.statusCode).json({ error: err.message });
+      }
+      return res.status(500).json({ error: 'Internal Server Error' });
+    }
+  });
+
+  
+
+
+
+
 }

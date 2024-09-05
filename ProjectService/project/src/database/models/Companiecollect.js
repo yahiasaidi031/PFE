@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const compagniecollectSchema = new mongoose.Schema({
     montant: { type: Number },
     objectivemontant: { type: String },
-    project: { type: mongoose.Schema.Types.ObjectId, ref: 'Project' }
+    project: { type: mongoose.Schema.Types.ObjectId, ref: 'Project' },
 },
 {
     toJSON: {

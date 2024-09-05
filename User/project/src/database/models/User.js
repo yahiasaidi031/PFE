@@ -5,7 +5,7 @@ const userSchema = new mongoose.Schema({
     lastname: { type: String },
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
-    isEnterprise: { type: Boolean },
+    isEnterprise: { type: Boolean, default:'false' },
     phone: { type: String, required: true },
     role: {
         type: String,
@@ -14,8 +14,9 @@ const userSchema = new mongoose.Schema({
     },
     companyName: { type: String },
     companyRegistrationNumber: { type: String },
-    isBlocked: { type: Boolean, default: false } 
-}, {
+    isBlocked: { type: Boolean, default: false } ,
+},
+ {
     timestamps: true 
 });
 

@@ -1,4 +1,5 @@
 const PaiementRepository = require("../database/repository/paiement-repository");
+const { FormateData } = require("../utils");
 
 class PaiementService {
     constructor() {
@@ -27,6 +28,33 @@ class PaiementService {
         }
     }
     
+
+    async createDonMateriel(userId, compagneCollectId, nom, prenom, email, telephone, materiel, message) {
+        try {
+            const donMateriel = await this.repository.createDonMateriel(userId, compagneCollectId, nom, prenom, email, telephone, materiel, message);
+            return donMateriel;
+        } catch (error) {
+            console.error('Erreur dans createDonMateriel :', error);
+            throw error;
+        }
+    }
+    async getAllDonMateriel() {
+        try {
+            const donsMateriel = await this.repository.getAllDonMateriel();
+            return FormateData(donsMateriel);
+        } catch (error) {
+            throw new Error(error.message);
+        }
+    }
+
+    async deleteDonMateriel(donMaterielId) {
+        try {
+            const deletedDonMateriel = await this.repository.deleteDonMateriel(donMaterielId);
+            return FormateData(deletedDonMateriel);
+        } catch (error) {
+            throw new Error(error.message);
+        }
+    }
 
     
 }

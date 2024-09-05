@@ -4,12 +4,12 @@ const Schema = mongoose.Schema;
 const projectSchema = new mongoose.Schema({
     title: { type: String, required:true },
     description: { type: String, required: true },
-    category: { type: String, required: true },
+    category: { type: Schema.Types.ObjectId, ref: 'Category' },
     objective: { type: String },
-    tags: { type: String, },
+    tags: { type: Schema.Types.ObjectId, ref: 'Tags' },
     image: { type: String, },
     avancements: [{ type: Schema.Types.ObjectId, ref: 'Avancement' }],
-    compagniecollect: [{type: Schema.Types.ObjectId, ref: 'Compagniecollect' }]
+    compagniecollect: [{type: Schema.Types.ObjectId, ref: 'Compagniecollect' }],
 },
     
   {

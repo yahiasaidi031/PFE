@@ -4,12 +4,12 @@ const { databaseConnection } = require('./database');
 const expressApp = require('./express-app');
 const { CreateChannel } = require('./utils');
 const projectservice = require('./services/project-service')
+const multer = require('multer');
 
 const StartServer = async() => { 
 
 
-
- 
+   
     const app = express();
     
     await databaseConnection();  
@@ -32,6 +32,10 @@ const StartServer = async() => {
         console.log(err);
         process.exit();
     })
+
+
+
+
 }
 
 StartServer();

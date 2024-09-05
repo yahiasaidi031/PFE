@@ -1,4 +1,7 @@
-const { UserModel } = require("../models/index")
+const { UserModel,ContactModel } = require("../models/index")
+
+
+
 const {
   APIError,
   BadRequestError,
@@ -59,7 +62,7 @@ class UserRepository {
   
 
 
-  async FindUser({ email }) {
+  async FindUser( {email }) {
     try {
       const existingUser = await UserModel.findOne({ email: email });
       return existingUser;
@@ -113,7 +116,60 @@ class UserRepository {
         );
     }
 }
-  
+
+async UpdateUserPassword(email, newPassword) {
+  try {
+    const result = await UserModel.updateOne(
+      { email },
+      { $set: { password: newPassword } }
+    );
+    if (result.modifiedCount === 0) {
+      throw new APIError(404, 'User not found');
+    }
+    return { message: 'Password updated successfully' };
+  } catch (err) {
+    throw new APIError(
+      "API Error",
+      STATUS_CODES.INTERNAL_ERROR,
+      "Unable to update password"
+    );
+  }
 }
+async UpdateUserRole(userId, newRole) {
+  try {
+    const updatedUser = await UserModel.findByIdAndUpdate(
+      userId,
+      { role: newRole },
+      { new: true }
+    );
+    return updatedUser;
+  } catch (err) {
+    throw new APIError('Unable to update user role', err);
+  }
+}
+
+
+
+async CreateContact(contactData) {
+  try {
+    const contact = new ContactModel(contactData);
+    await contact.save();
+    return contact;
+  } catch (err) {
+    throw new APIError('Unable to create contact', err);
+  }
+}
+
+
+async FindAllContacts() {
+  try {
+    const contacts = await ContactModel.find();
+    return contacts;
+  } catch (err) {
+    throw new APIError('Unable to fetch contacts', err);
+  }
+}
+}
+
 
 module.exports = UserRepository;

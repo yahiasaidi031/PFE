@@ -21,7 +21,14 @@ const StartServer = async() => {
     .on('error', (err) => {
         console.log(err);
         process.exit();
-    })
+        })
+
+    app.use(express.static('uploads')
+
+    )
 }
+
+
+
 
 StartServer();

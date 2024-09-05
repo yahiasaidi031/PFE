@@ -1,3 +1,4 @@
+const { required } = require('joi');
 const mongoose = require('mongoose');
 
 const AvancementSchema = new mongoose.Schema({ 
@@ -5,6 +6,7 @@ const AvancementSchema = new mongoose.Schema({
     description: { type: String},
     image: { type: String },
     video: { type: String},
+    projectId: { type: mongoose.Schema.Types.ObjectId, ref: 'Project'}
     
 },
     
